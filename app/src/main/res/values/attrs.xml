@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--软件盘-->
+    <declare-styleable name="KeyboardAwareLinearLayout">
+        <!--背景是否设置为固定的-->
+        <attr name="keybord_aware_backfixed" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ConversationInputPanel">
+        <!--表情的高度-->
+        <attr name="conversation_emoji_height" format="dimension"/>
+        <!--功能的高度-->
+        <attr name="conversation_function_height" format="dimension"/>
+    </declare-styleable>
+
+</resources>
