@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!--聊天输入框-->
+        <LinearLayout
+            android:id="@+id/ll_chat_detail_emojoy_editetext_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_chat_detail_input"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="我是输入框"
+                android:maxLines="4"
+                android:padding="10dp"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:id="@+id/fl_chat_detail_emoticon"
+                android:layout_width="80dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/iv_chat_detail_emoticon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="按钮1"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fl_chat_detail_ext"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/iv_chat_detail_ext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:text="按钮2"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <!--功能1-->
+        <com.example.myapplication.weiget.KeyboardHeightFrameLayout
+            android:id="@+id/keybord_height_conversation_input_panel_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/red"
+            android:visibility="gone">
+
+        </com.example.myapplication.weiget.KeyboardHeightFrameLayout>
+
+
+        <!--功能2-->
+        <com.example.myapplication.weiget.KeyboardHeightFrameLayout
+            android:id="@+id/keybord_height_conversation_input_panel_function"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@color/purple_200"
+            android:visibility="gone">
+
+
+        </com.example.myapplication.weiget.KeyboardHeightFrameLayout>
+    </LinearLayout>
+
+</merge>
