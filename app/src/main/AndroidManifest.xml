@@ -22,6 +22,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".DemoSecondActivity"
+            android:windowSoftInputMode="adjustNothing"
             android:screenOrientation="portrait" />
     </application>
 

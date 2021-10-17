@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         buttonSecond.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
-
+                val intent = Intent(this@MainActivity,DemoSecondActivity::class.java)
+                startActivity(intent)
             }
         })
     }

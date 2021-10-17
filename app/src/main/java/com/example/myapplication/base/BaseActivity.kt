@@ -1,11 +1,9 @@
 package com.example.myapplication.base
 
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,7 +23,6 @@ import com.example.myapplication.weiget.KeyboardAwareLinearLayout
  */
 public abstract class BaseActivity : AppCompatActivity(), ConversationInputPanel.OnConversationInputPanelStateChangeListener,
     KeyboardAwareLinearLayout.OnKeyboardShownListener {
-    lateinit var backImage: ImageView;
     lateinit var inputAwareLayout: InputAwareLayout
     lateinit var recyclerView: RecyclerView
     lateinit var conversationInputPanel: ConversationInputPanel
@@ -36,7 +33,6 @@ public abstract class BaseActivity : AppCompatActivity(), ConversationInputPanel
         super.onCreate(savedInstanceState)
         ActivityManager.getInstance().addActivity(this)
         setContentView(layoutId())
-        backImage = this.findViewById<ImageView>(R.id.iv_backimage);
         inputAwareLayout = this.findViewById<InputAwareLayout>(R.id.chat_detail_input_aware_layout);
         recyclerView = this.findViewById<RecyclerView>(R.id.recyclerview_chat_detail)
         conversationInputPanel = this.findViewById<ConversationInputPanel>(R.id.chat_detail_conversaton_input_panel)
