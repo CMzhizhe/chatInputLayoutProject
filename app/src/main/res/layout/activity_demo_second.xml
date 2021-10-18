@@ -15,25 +15,39 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <com.example.myapplication.weiget.InputAwareLayout
-        android:id="@+id/chat_detail_input_aware_layout"
+    <FrameLayout
         android:layout_width="match_parent"
-        app:keybord_aware_backfixed="true"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview_chat_detail"
+        <ImageView
+            android:scaleType="centerCrop"
+            android:src="@drawable/icontest"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_height="match_parent"/>
 
-        <com.example.myapplication.weiget.ConversationInputPanel
-            android:id="@+id/chat_detail_conversaton_input_panel"
+        <com.example.myapplication.weiget.InputAwareLayout
+            android:id="@+id/chat_detail_input_aware_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:conversation_emoji_height="@dimen/dp220"
-            app:conversation_function_height="@dimen/dp175" />
+            app:keybord_aware_backfixed="true"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    </com.example.myapplication.weiget.InputAwareLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_chat_detail"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.example.myapplication.weiget.ConversationInputPanel
+                android:id="@+id/chat_detail_conversaton_input_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:conversation_emoji_height="@dimen/dp220"
+                app:conversation_function_height="@dimen/dp175" />
+
+        </com.example.myapplication.weiget.InputAwareLayout>
+
+    </FrameLayout>
+
+
 </LinearLayout>

@@ -84,7 +84,7 @@ public abstract class BaseActivity : AppCompatActivity(), ConversationInputPanel
      * @description 功能区展开
      */
     override fun onInputPanelExpanded() {
-        recyclerView.scrollToPosition(listData.size)
+        recyclerView.scrollToPosition(listData.size - 1)
     }
 
     /**
@@ -93,7 +93,11 @@ public abstract class BaseActivity : AppCompatActivity(), ConversationInputPanel
     * @description 软键盘弹出
     */
     override fun onKeyboardShown() {
-        recyclerView.scrollToPosition(listData.size - 1)
+        recyclerView.post(object : Runnable{
+            override fun run() {
+                recyclerView.scrollToPosition(listData.size - 1)
+            }
+        })
     }
 
     override fun onDestroy() {
